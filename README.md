@@ -8,8 +8,7 @@ The system simulates a real-world traffic intersection, ensuring safe transition
 
 ## Features
 - FSM-based traffic light sequencing for four directions  
-- Configurable timing for **Green and Yellow** lights  
-- **Clock divider** to convert FPGA high-speed clock to human-observable timing (~1Hz)  
+- Configurable timing for **Green and Yellow** lights   
 - Reset functionality to start the sequence from **North Green**  
 - Modular design for easy extension to more intersections or sensors  
 - Suitable for **digital design learning**, **FPGA prototyping**, and **embedded systems projects**
@@ -48,41 +47,16 @@ Each **green light** lasts for ~8 clock cycles (configurable in FSM), and **yell
 | East      | ON/OFF| ON/OFF | ON/OFF |
 | West      | ON/OFF| ON/OFF | ON/OFF |
 
-*(Add FPGA board photos or simulation screenshots here for visual demonstration)*
-
----
-
-## FPGA Implementation Steps
-
-1. Open **Vivado** and create a new RTL project.  
-2. Add the Verilog source files (`traffic_control.v`, `top_traffic_control.v`, `clock_divider.v`).  
-3. Add `.xdc` constraints file and map **LEDs and reset button**.  
-4. Run **Synthesis → Implementation → Generate Bitstream**.  
-5. Connect **Nexys A7** via USB and open **Hardware Manager**.  
-6. Program the FPGA with the `.bit` file.  
-7. Observe the traffic light sequence on LEDs.  
-
----
-
-## Testing Instructions
-
-1. Observe LEDs representing each traffic light:  
-   - **Green** → Go  
-   - **Yellow** → Wait  
-   - **Red** → Stop  
-2. Verify the **sequence** follows: North → South → East → West.  
-3. Press the **reset button** to restart from **North Green**.  
-4. Ensure LEDs light up according to FSM timing for **green** and **yellow** phases.  
 
 ---
 
 ## Learning Outcomes
 
 - Implementing a **finite state machine (FSM)** in Verilog  
-- Understanding **clock division** for timing control in FPGA  
-- Mapping **digital outputs** to LEDs on FPGA board  
+- Understanding **Digital Logic** and **Sequential Circuits**  
+- Verilog Coding and Modeling Styles  
 - Designing **modular and extendable digital circuits**  
-- Debugging and testing **FPGA-based designs using Vivado**  
+- Timing, Counters,synthesis, Clock Division 
 
 ---
 
