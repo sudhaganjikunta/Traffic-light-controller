@@ -15,16 +15,6 @@ The system simulates a real-world traffic intersection, ensuring safe transition
 
 ---
 
-## Project Structure
-
-| File | Description |
-|------|-------------|
-| `traffic_control.v` | FSM module controlling traffic light states |
-| `top_traffic_control.v` | Top module with clock divider and FPGA pin mapping |
-| `clock_divider.v` | Generates slow clock from FPGA 100 MHz clock |
-| `constraints.xdc` | Pin mapping for LEDs and reset button on Nexys A7 |
-
----
 
 ## Traffic Light Sequence
 
